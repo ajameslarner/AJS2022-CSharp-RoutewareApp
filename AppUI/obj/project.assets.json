@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "IronXL.Excel/2021.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/IronXL.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IronXL.dll": {}
+        }
+      },
+      "AppLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "IronXL.Excel": "2021.12.0"
+        },
+        "compile": {
+          "bin/placeholder/AppLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IronXL.Excel/2021.12.0": {
+      "sha512": "F7ekFGBm5boGJ7YiwdmRW3J1vLDqsrvMnXNYEHIGnH/NjhnAbt9Ynnjs+17MVVrMCZN2FuxlS/7LOaPHMTSzoQ==",
+      "type": "package",
+      "path": "ironxl.excel/2021.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.txt",
+        "ironxl.excel.2021.12.0.nupkg.sha512",
+        "ironxl.excel.nuspec",
+        "lib/net45/IronXL.dll",
+        "lib/net45/IronXL.xml",
+        "lib/netstandard2.0/IronXL.dll",
+        "lib/netstandard2.0/IronXL.xml",
+        "readme-setup.txt",
+        "readme.txt"
+      ]
+    },
+    "AppLib/1.0.0": {
+      "type": "project",
+      "path": "../AppLib/AppLib.csproj",
+      "msbuildProject": "../AppLib/AppLib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "AppLib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\antho\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\xampp\\htdocs\\AJS2022-CSharp-RoutewareApp\\AppUI\\AppUI.csproj",
+      "projectName": "AppUI",
+      "projectPath": "C:\\xampp\\htdocs\\AJS2022-CSharp-RoutewareApp\\AppUI\\AppUI.csproj",
+      "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\AJS2022-CSharp-RoutewareApp\\AppUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\xampp\\htdocs\\AJS2022-CSharp-RoutewareApp\\AppLib\\AppLib.csproj": {
+              "projectPath": "C:\\xampp\\htdocs\\AJS2022-CSharp-RoutewareApp\\AppLib\\AppLib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

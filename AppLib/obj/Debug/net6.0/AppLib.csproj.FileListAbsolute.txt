@@ -1,0 +1,12 @@
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\bin\Debug\net6.0\AppLib.deps.json
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\bin\Debug\net6.0\AppLib.dll
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\bin\Debug\net6.0\ref\AppLib.dll
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\bin\Debug\net6.0\AppLib.pdb
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.csproj.AssemblyReference.cache
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.AssemblyInfoInputs.cache
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.AssemblyInfo.cs
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.dll
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\ref\AppLib.dll
+C:\xampp\htdocs\AJS2022-CSharp-RoutewareApp\AppLib\obj\Debug\net6.0\AppLib.pdb

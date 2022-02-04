@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AppUI/1.0.0": {
+        "dependencies": {
+          "AppLib": "1.0.0"
+        },
+        "runtime": {
+          "AppUI.dll": {}
+        }
+      },
+      "IronXL.Excel/2021.12.0": {
+        "runtime": {
+          "lib/netstandard2.0/IronXL.dll": {
+            "assemblyVersion": "2021.12.0.0",
+            "fileVersion": "2021.12.0.0"
+          }
+        }
+      },
+      "AppLib/1.0.0": {
+        "dependencies": {
+          "IronXL.Excel": "2021.12.0"
+        },
+        "runtime": {
+          "AppLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AppUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IronXL.Excel/2021.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F7ekFGBm5boGJ7YiwdmRW3J1vLDqsrvMnXNYEHIGnH/NjhnAbt9Ynnjs+17MVVrMCZN2FuxlS/7LOaPHMTSzoQ==",
+      "path": "ironxl.excel/2021.12.0",
+      "hashPath": "ironxl.excel.2021.12.0.nupkg.sha512"
+    },
+    "AppLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
