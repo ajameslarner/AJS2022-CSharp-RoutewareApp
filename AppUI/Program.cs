@@ -1,19 +1,28 @@
-﻿using IronXL;
-using System.Linq;
-using Excel = Microsoft.Office.Interop.Excel; //Add a library reference to the excel assembly
+﻿using AppLib;
 
-//Requires a license key to use
-WorkBook workbook = WorkBook.Load("data/Data.xls");
-WorkSheet sheet = workbook.WorkSheets.First();
+namespace AppUI;
 
-RangeColumn column = sheet.GetColumn(0);
-
-string? searchTerm = Console.ReadLine();
-
-foreach (var item in column)
+class MainProgram
 {
-    if (item.ToString() == searchTerm)
+    static void Main(string[] args)
     {
-        Console.WriteLine("Success. Match Found: " + item.ToString());
+        RoutewareFileHandle DataFile = new RoutewareFileHandle("Data.csv");
+
+        while (true)
+        {
+            Console.Write("Enter your search term: ");
+            string? userInput = Console.ReadLine();
+
+            var matchedRecords = DataFile.SearchRecord(userInput, 0);
+
+            foreach (var item in matchedRecords)
+            {
+                Console.WriteLine(item);
+                Console.WriteLine("-------------------");
+            }
+
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }

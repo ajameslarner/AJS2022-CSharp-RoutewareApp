@@ -8,17 +8,17 @@
     ".NETCoreApp,Version=v6.0": {
       "AppLib/1.0.0": {
         "dependencies": {
-          "IronXL.Excel": "2021.12.0"
+          "System.Device.Location.Portable": "1.0.0"
         },
         "runtime": {
           "AppLib.dll": {}
         }
       },
-      "IronXL.Excel/2021.12.0": {
+      "System.Device.Location.Portable/1.0.0": {
         "runtime": {
-          "lib/netstandard2.0/IronXL.dll": {
-            "assemblyVersion": "2021.12.0.0",
-            "fileVersion": "2021.12.0.0"
+          "lib/System.Device.Portable.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -30,12 +30,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IronXL.Excel/2021.12.0": {
+    "System.Device.Location.Portable/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-F7ekFGBm5boGJ7YiwdmRW3J1vLDqsrvMnXNYEHIGnH/NjhnAbt9Ynnjs+17MVVrMCZN2FuxlS/7LOaPHMTSzoQ==",
-      "path": "ironxl.excel/2021.12.0",
-      "hashPath": "ironxl.excel.2021.12.0.nupkg.sha512"
+      "sha512": "sha512-VttxozXEleYcK2NiMo7xKMhDCCJbKtjnxcWDmqu703DeceLTI/9jopfEblyZKL0DWHGyOYLEan06yk6Hcv2cXw==",
+      "path": "system.device.location.portable/1.0.0",
+      "hashPath": "system.device.location.portable.1.0.0.nupkg.sha512"
     }
   }
 }

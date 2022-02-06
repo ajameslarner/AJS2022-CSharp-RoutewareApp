@@ -44,9 +44,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "IronXL.Excel": {
+            "System.Device.Location.Portable": {
               "target": "Package",
-              "version": "[2021.12.0, )"
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -111,6 +111,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.8.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
