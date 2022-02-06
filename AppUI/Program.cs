@@ -15,10 +15,21 @@ class MainProgram
 
             var matchedRecords = DataFile.SearchRecord(userInput, 0);
 
-            foreach (var item in matchedRecords)
+            for (int i = 0; i < matchedRecords.Count; i++)
+            {
+                Console.WriteLine($"{i+1} || {matchedRecords[i]}");
+                Console.WriteLine("-------------------");
+            }
+
+            Console.Write("Enter your chosen record: ");
+            string? recordSelection = Console.ReadLine();
+            int selectionNum = Convert.ToInt32(recordSelection);
+
+            var closeLocations = DataFile.SimilarRecordsByLocation(matchedRecords[selectionNum]);
+
+            foreach (var item in closeLocations)
             {
                 Console.WriteLine(item);
-                Console.WriteLine("-------------------");
             }
 
             Console.ReadLine();
