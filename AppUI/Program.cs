@@ -29,7 +29,7 @@ class MainProgram
 
             foreach (var item in closeLocations)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
             }
 
             Console.ReadLine();

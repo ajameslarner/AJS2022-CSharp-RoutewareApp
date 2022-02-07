@@ -3,10 +3,12 @@ public class RoutewareFileHandle
 {
     public string FilePath { get; set; }
     public string[] FileLinesData { get; set; }
+    public string[][] FileDataSplit { get; set; }
     public RoutewareFileHandle(string filePath)
     {
         FilePath = filePath;
         FileLinesData = System.IO.File.ReadAllLines(this.FilePath);
+        FileDataSplit = FileLinesData.Select(x => x.Split(",")).ToArray().ToArray();
     }
 
     public ArrayList SearchRecord(string? term, int column)
@@ -39,40 +41,35 @@ public class RoutewareFileHandle
     {
         ArrayList matches = new ArrayList();
 
+        ArrayList similar = new ArrayList();
+
         string? record = recordSet.ToString();
         string[] recordData = record.Split(',');
         double lat = Convert.ToDouble(recordData[4]);
         double lon = Convert.ToDouble(recordData[5]);
         var coord = new GeoCoordinate(lat, lon);
-
+        
         try
         {
-            for (int i = 0; i < FileLinesData.Length; i++)
+            for (int i = 1; i < FileLinesData.Length; i++)
             {
-                string[] cells = FileLinesData[i].Split(',');
+                string[] cells = FileLinesData[i].Split(",");
 
-                var nearest = cells.Select(x => new GeoCoordinate(Convert.ToDouble(cells[4]), Convert.ToDouble(cells[5])))
-                        .OrderBy(x => x.GetDistanceTo(coord))
-                        .Take(10);
-
-                //var nearest = (from h in FileLinesData
-                 //       let geo = new GeoCoordinate( Convert.ToDouble(cells[4]), Convert.ToDouble(cells[5]))
-                 //       orderby geo.GetDistanceTo(coord)
-                 //       select h).Take(10);
-
-                foreach (var item in nearest)
-                {
-                    matches.Add(item.ToString());
-                }
+                matches.Add(new GeoCoordinate(Convert.ToDouble(cells[4]), Convert.ToDouble(cells[5])).ToString());
             }
-            
-            return matches;
+
+            GeoCoordinate[] closeLocations = SortSelection(coord, matches);
+
+            foreach (var item in closeLocations)
+            {
+                similar.Add(item.ToString());
+            }
+
+            return similar;
             
         }
         catch (Exception e)
         {
-            matches.Add("No Records Found");
-            return matches;
             throw new ApplicationException("Exception Caught: ", e);
         }
     }
@@ -80,5 +77,17 @@ public class RoutewareFileHandle
     public bool DoesRecordMatch(string? term, string[] cells, int column)
     {
         return (cells[column].ToLower().Contains(term.ToLower()));
+    }
+
+    public GeoCoordinate[] SortSelection(GeoCoordinate pos, ArrayList locations)
+    {
+        string[] loc = (string[])locations.ToArray( typeof( string ) );
+
+        var nearest = loc.Select(x => new GeoCoordinate(Convert.ToDouble(x.Split(",")[0]), Convert.ToDouble(x.Split(",")[1])))
+                    .OrderBy(x => x.GetDistanceTo(pos))
+                    .Take(10)
+                    .ToArray();
+
+        return nearest;
     }
 }
