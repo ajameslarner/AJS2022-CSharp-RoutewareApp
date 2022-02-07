@@ -21,7 +21,8 @@ class MainProgram
                 Console.WriteLine("-------------------");
             }
 
-            Console.Write("Enter your chosen record: ");
+            Console.WriteLine("Enter your chosen record by index to find the 10 closest locations");
+            Console.Write("Record Index Number: ");
             string? recordSelection = Console.ReadLine();
             int selectionNum = Convert.ToInt32(recordSelection);
 

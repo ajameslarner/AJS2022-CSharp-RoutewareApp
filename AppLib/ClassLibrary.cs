@@ -40,7 +40,6 @@ public class RoutewareFileHandle
     public ArrayList SimilarRecordsByLocation(Object recordSet)
     {
         ArrayList matches = new ArrayList();
-
         ArrayList similar = new ArrayList();
 
         string? record = recordSet.ToString();
